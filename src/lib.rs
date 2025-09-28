@@ -136,6 +136,11 @@ impl Toasts {
         self
     }
 
+    pub fn set_anchor(&mut self, anchor: Align2, offset: impl Into<Pos2>) {
+        self.align = anchor;
+        self.offset = offset.into();
+    }
+
     /// Direction where the toasts stack up
     pub fn direction(mut self, direction: impl Into<Direction>) -> Self {
         self.direction = direction.into();
