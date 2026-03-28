@@ -257,7 +257,7 @@ impl Toasts {
 
 fn default_toast_contents(ui: &mut Ui, toast: &mut Toast) -> Response {
     let inner_margin = 10.0;
-    let frame = Frame::window(ui.style()).shadow(egui::Shadow::NONE);
+    let frame = Frame::window(ui.style());
     let response = frame
         .inner_margin(inner_margin)
         .stroke(Stroke::NONE)
