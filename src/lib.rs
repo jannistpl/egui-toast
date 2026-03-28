@@ -260,7 +260,6 @@ fn default_toast_contents(ui: &mut Ui, toast: &mut Toast) -> Response {
     let frame = Frame::window(ui.style());
     let response = frame
         .inner_margin(inner_margin)
-        .stroke(Stroke::NONE)
         .show(ui, |ui| {
             ui.horizontal(|ui| {
                 let a = |ui: &mut Ui, toast: &mut Toast| {
