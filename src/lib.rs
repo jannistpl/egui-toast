@@ -273,7 +273,10 @@ fn default_toast_contents(ui: &mut Ui, toast: &mut Toast) -> Response {
                         });
                     }
                 };
-                let b = |ui: &mut Ui, toast: &mut Toast| ui.label(toast.text.clone());
+                let b = |ui: &mut Ui, toast: &mut Toast| {
+                    let label = egui::Label::new(toast.text.clone()).selectable(false);
+                    ui.add(label);
+                };
 
                 // Draw the contents in the reverse order on right-to-left layouts
                 // to keep the same look.
